@@ -1,26 +1,26 @@
-function sortedSquaredArrayFirst(array) {
-   const squaredArray = new Array(array.length).fill(0);
+function sortedSquaredArray(array) {
+    const squaredArray = new Array(array.length).fill(0)
     for (let idx = 0; idx < array.length; idx++) {
-        const value = array[idx];
-        squaredArray[idx] = value * value;
+        const value = array[idx]
+        squaredArray[idx] = value * value
     }
-    return squaredArray.sort((a , b) => a-b)
+    return squaredArray.sort((a,b) => a - b)
 }
 
-function sortedSquaredArraySecond(array) {
-    const sortedSquares = new Array(array.length).fill(0);
-    let smallestIdx = 0
-    let largestIdx = array.length - 1
+function sortedSquaredArray(array) {
+    const squaredArray = new Array(array.length).fill(0)
+    let smallerValueIdx = 0
+    let largerValueIdx = array.length - 1
     for (let idx = array.length - 1; idx >= 0; idx--) {
-        const smallestValue = array[smallestIdx]
-        const largestValue = array[largestIdx]
-        if (Math.abs(smallestValue) > Math.abs(largestValue)) {
-            sortedSquares[idx] = smallestValue * smallestValue
-            smallestIdx++;
+        const smallerValue = array[smallerValueIdx]
+        const largerValue = array[largerValueIdx]
+        if (Math.abs(smallerValue) > Math.abs(largerValue)) {
+            squaredArray[idx] = smallerValue * smallerValue
+            smallerValueIdx++;
         } else {
-            sortedSquares[idx] = largestArrayValue * largestArrayValue;
-            largestIdx--;
+            squaredArray[idx] = largerValue * largerValue
+            largerValueIdx--;
         }
     }
-    return sortedSquares
+    return squaredArray
 }
