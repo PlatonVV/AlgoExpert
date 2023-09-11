@@ -1,4 +1,4 @@
-function sortedSquaredArray(array) {
+function sortedSquaredArrayFirst(array) {
     const squaredArray = new Array(array.length).fill(0)
     for (let idx = 0; idx < array.length; idx++) {
         const value = array[idx]
@@ -7,7 +7,7 @@ function sortedSquaredArray(array) {
     return squaredArray.sort((a,b) => a - b)
 }
 
-function sortedSquaredArray(array) {
+function sortedSquaredArraySecond(array) {
     const squaredArray = new Array(array.length).fill(0)
     let smallerValueIdx = 0
     let largerValueIdx = array.length - 1
